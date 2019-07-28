@@ -1,6 +1,6 @@
 {
   "watch": ["dist"],
   "ext": "js",
-  "exec": "node --inspect=0.0.0.0:9229 dist/main",
+  "exec": "node --inspect=0.0.0.0:9229 --nolazy dist/main",
   "ignore": ["node_modules"]
 }
