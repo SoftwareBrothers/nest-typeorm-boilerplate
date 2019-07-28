@@ -40,11 +40,13 @@ make debug
 
 1. In your IDE go to `Run` -> `Edit Configurations...`
 2. `+` (Add New Configuration) -> `Attach to Node.js/Chrome`
-2.1 Name: name it as you want, like `debug`
-2.2 Host: localhost
-2.3 Port: 9229
-2.4 Attach to: Chrome or Node.js > 6.3
-2.5 `OK`
+    * Name: name it as you want, like `debug`
+    * Host: localhost
+    * Port: 9229
+    * Attach to: Chrome or Node.js > 6.3
+    * Reconnect automatically
+    * `OK`
+
 3. Start debugging!
 
 # nestJS
