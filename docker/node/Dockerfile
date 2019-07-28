@@ -1,5 +1,8 @@
 FROM node:12-alpine
 
+ADD --chown=node:node https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
+RUN chmod +x /wait
+
 WORKDIR /home/node/app
 COPY package.json /home/node/app/
 COPY yarn.lock /home/node/app/
@@ -7,8 +10,5 @@ COPY yarn.lock /home/node/app/
 RUN yarn install
 
 COPY . .
-
-ADD --chown=node:node https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
-RUN chmod +x /wait
 
 CMD /wait && sh -c 'yarn start:dev'
