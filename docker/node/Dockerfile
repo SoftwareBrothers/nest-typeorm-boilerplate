@@ -1,6 +1,4 @@
-FROM node:latest
-RUN npm install -g yarn
-RUN mkdir -p /home/node/app/node_modules
+FROM node:12-alpine
 
 WORKDIR /home/node/app
 COPY package.json /home/node/app/
