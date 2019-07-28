@@ -29,7 +29,7 @@ make cert
 Run the app in debug mode:
 #### Using docker-compose
 ```
-docker-compose -f ./docker-compose.yaml -f ./with-debug.yaml up --build
+docker-compose -f ./docker-compose.yaml -f ./with-debug.yaml up --build -d
 ```
 #### Using makefile
 ```
