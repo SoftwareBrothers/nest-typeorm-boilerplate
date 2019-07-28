@@ -4,11 +4,9 @@ ADD --chown=node:node https://github.com/ufoscout/docker-compose-wait/releases/d
 RUN chmod +x /wait
 
 WORKDIR /home/node/app
-COPY package.json /home/node/app/
-COPY yarn.lock /home/node/app/
 
-RUN yarn install
-
+COPY package.json yarn.lock ./
+RUN yarn
 COPY . .
 
 CMD /wait && sh -c 'yarn start:dev'
