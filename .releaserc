@@ -1,0 +1,37 @@
+{
+  "branches": [
+    "production",
+    { "name": "master", "channel": "pre/rc", "prerelease": "rc" },
+  ],
+  "plugins": [
+    ["@semantic-release/commit-analyzer", {
+      "preset": "angular",
+      "releaseRules": [
+        {"type": "docs", "release": "patch"},
+        {"type": "refactor", "release": "patch"},
+        {"scope": "no-release", "release": "patch"}
+      ]
+    }],
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/github",
+    "@semantic-release/git",
+    [
+      "semantic-release-jira-releases-sb",
+      {
+        "projectId": "INSERT_YOUR_ID_HERE",
+        "releaseNameTemplate": "v${version}",
+        "jiraHost": "kmpgroup.atlassian.net",
+        "ticketPrefixes": [ "INSERT_YOUR_PREFIX_HERE" ],
+        "released": true,
+        "setReleaseDate": true
+      }
+    ],
+    [
+      "semantic-release-slack-bot",
+      {
+        "notifyOnSuccess": true,
+        "notifyOnFail": true
+      }
+    ]
+  ]
+}

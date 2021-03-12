@@ -28,6 +28,7 @@ lerna-debug.log*
 *.sublime-workspace
 
 # IDE - VSCode
+!.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -36,7 +37,13 @@ lerna-debug.log*
 
 # project
 .env
+.env.*
+.env.prod
 
 # docker
 /docker/db
 /docker/logs
+
+#adminBro
+.adminbro
+.cache

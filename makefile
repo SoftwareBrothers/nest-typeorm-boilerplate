@@ -6,7 +6,11 @@ debug:
 	docker-compose -f ./docker-compose.yaml -f ./with-debug.yaml up --build -d
 start:
 	docker-compose -f ./docker-compose.yaml up --build -d
+start-mac:
+	docker-compose -f ./docker-compose.mac.yaml up --build -d
 stop:
 	docker-compose -f ./docker-compose.yaml stop
 restart:
 	make stop && make start
+restart-mac:
+	make stop && make start-mac
