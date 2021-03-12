@@ -116,3 +116,9 @@ yarn test:e2e
 # test coverage
 yarn test:cov
 ```
+
+
+# Release
+
+### Configure semantic-release
+Open `.releaserc` file and change `INSERT_YOUR_ID_HERE` to id of your project in Jira.
